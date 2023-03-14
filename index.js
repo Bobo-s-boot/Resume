@@ -21,6 +21,7 @@ app.set('port', port)
  * Create HTTP server.
  */
 
+// deepcode ignore HttpToHttps: <please specify a reason of ignoring this>
 const server = http.createServer(app)
 
 /**

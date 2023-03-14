@@ -1,0 +1,76 @@
+<div> 
+    <title>“Person”</title>
+    {{#with person}}
+ <main>
+   <section>
+      {{> title big=true data="Person info"}}
+      <ul>
+       <li>
+        <div>
+                <p>
+                    {{name}}
+                    <br>
+                    {{age}}
+                    <br>
+                    {{gender}}
+                </p>
+            </div>
+            <br>
+            <hr>
+            {{> title big=true data="Address"}}
+            <div>
+                {{#each address}}
+                <ul>
+                 <li>
+                     {{this}}
+                </li>
+                </ul>     
+                {{/each}}
+            </div>
+       </li>
+      </ul>
+    </section>
+    
+    <br>
+    <hr>
+    
+    <section>
+        {{> title big=true data="Education"}}
+  <ul>
+   {{#each education}}
+   <li>
+      {{degree}}
+      <br>
+      {{major}}
+      <br>
+      {{university}}
+      <br>
+      {{graduationYear}}
+   </li>
+    {{/each}}
+  </ul>
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+       {{> title big=true data="WorkExperience"}}
+  <ul>
+   {{#each workExperience }}
+   <li>
+      {{company}}
+      <br>
+      {{title}}
+      <br>
+    StartDate-{{startDate}}
+      <br>
+    EndDate-{{endDate}}
+   </li>
+    {{/each}}
+  </ul>
+    </section>
+
+ </main>
+{{/with}}
+</div>
