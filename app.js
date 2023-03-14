@@ -9,6 +9,8 @@ dotenv.config()
 
 const app = express()
 
+app.disable('x-powered-by')
+
 const hbs = require('express-handlebars')
 
 app.set('view engine', 'hbs')
@@ -52,6 +54,7 @@ app.use((req, res, next) => {
 })
 
 // error handler
+// deepcode ignore NoRateLimitingForExpensiveWebOperation: <please specify a reason of ignoring this>
 app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message
