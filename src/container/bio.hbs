@@ -1,0 +1,75 @@
+<div>
+    <title>Bio</title>
+    <main>
+        <section>
+             {{> title big=true data="Info about person"}}
+            <ul>
+                <li>
+                {{name}}
+                <br>
+                {{birthdate}}
+                <br>
+                {{birthplace}}
+                <br>
+                {{deathdate}}
+                <br>
+                {{deathplace}}
+                <br>
+                {{nationality}}
+                <br>
+                {{occupation}}
+                </li>
+            </ul>
+        </section>
+           <hr>
+           <br>
+
+         <section>
+            <title>Known_for</title>
+            {{> title big=false data=" Known_for"}}
+            <ul>
+               {{#each known_for}} 
+                <li>
+                  {{this}}
+                </li>
+               {{/each}}
+            </ul>
+         </section>
+         <hr>
+         <br>
+
+         <section>
+            <title>Education</title>
+            {{> title big=false data=" Education"}}
+            <ul>
+               {{#each education}} 
+                <li>
+                  {{degree}}
+                  {{field}}
+                  {{institution}}
+                  {{year}}
+                </li>
+               {{/each}}
+            </ul>
+         </section>
+         <hr>
+         <br>
+
+         <section>
+            <title>Notable_publicationss</title>
+            {{> title big=false data=" Notable_publications"}}
+            <ul>
+               {{#each notable_publications }} 
+                <li>
+                  {{title}}
+                  <br>
+                  {{year}}
+                  <br>
+                  {{publisher}}
+                </li>
+               {{/each}}
+            </ul>
+         </section>
+         {{!-- BOBO TOP shshsh --}}
+    </main>
+</div>
