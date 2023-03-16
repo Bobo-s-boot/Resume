@@ -1,0 +1,26 @@
+<div> 
+    <title>“Program”</title>
+    {{#with program}}
+ <main>
+   <section>
+      {{> title big=true data="Excursion"}}
+     <ul>
+        {{#with excursion}}
+          <li>
+            {{name}}
+          </li>
+            {{#with location}}
+            <li>
+            {{city}}
+            {{country}}
+            </li>
+            {{/with}}
+            </ul>
+        {{/with}}
+        </section>
+    <hr>
+    <br>
+    <em><mark>follow the news...</mark></em>
+</main>
+ {{/with}}
+</div>
